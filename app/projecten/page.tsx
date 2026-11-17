@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import { content } from "@/content";
+import { ProjectGallery } from "@/components/ProjectGallery";
+
+export const metadata: Metadata = {
+  title: content.projecten.metaTitle,
+  description: content.projecten.description,
+};
+
+export default function ProjectenPage() {
+  return (
+    <article data-section="projecten" className="mx-auto max-w-[1100px] px-5 py-12 md:py-16">
+      <p className="font-mono text-[0.95rem]">FOTO&apos;S</p>
+      <h1 className="mt-3 font-display text-[2.6rem] font-bold md:text-[3.4rem]">{content.projecten.h1}</h1>
+      <p className="mt-5 max-w-[46ch]">{content.projecten.lede}</p>
+      <div className="my-10 h-[3px] bg-steen" aria-hidden />
+      <ProjectGallery />
+    </article>
+  );
+}
