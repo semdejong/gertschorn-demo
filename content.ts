@@ -195,7 +195,7 @@ export const content = {
       photo: "voortuin",
       paragraphs: [
         "Tuin ontwerpen doet u bij Hoveniersbedrijf Gert Schorn. Samen met u stellen wij een plan op, zodat u uw droomtuin krijgt.",
-        "Vraag een vrijblijvende offerte aan. Dan kijken we samen naar de mogelijkheden.",
+        "Vraag een vrijblijvende offerte aan. Dan kijken wij samen naar de mogelijkheden.",
       ],
     },
     aanleg: {

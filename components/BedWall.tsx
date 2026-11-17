@@ -27,8 +27,8 @@ export function BedWall({
   return (
     <section aria-label={heading}>
       {heading ? (
-        <div className="bg-papier px-5 pb-6 pt-12 md:px-10">
-          <p className="mx-auto max-w-[1100px] font-mono text-[0.95rem]">{heading}</p>
+        <div className="mx-auto max-w-[1100px] px-5 pb-6 pt-12">
+          <p className="font-mono text-[0.95rem]">{heading}</p>
         </div>
       ) : null}
       <ol className="flex flex-col">

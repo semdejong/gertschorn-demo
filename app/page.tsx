@@ -29,11 +29,21 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex flex-col gap-[2px] bg-steen">
-        {content.home.statements.map((statement) => (
-          <p key={statement} className="bg-papier px-5 py-5 md:px-10">
-            <span className="mx-auto block max-w-[1100px]">{statement}</span>
-          </p>
+      <div className="flex flex-col gap-[3px] bg-steen">
+        {content.home.statements.map((statement, index) => (
+          <div key={statement} className="relative">
+            <div
+              aria-hidden
+              className={
+                index === 1
+                  ? "absolute inset-y-0 left-0 right-0 bg-papier min-[1280px]:right-16"
+                  : index === 2
+                    ? "absolute inset-y-0 left-0 right-0 bg-papier min-[1280px]:left-12"
+                    : "absolute inset-0 bg-papier"
+              }
+            />
+            <p className="relative mx-auto max-w-[1100px] px-5 py-5">{statement}</p>
+          </div>
         ))}
       </div>
 

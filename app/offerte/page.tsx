@@ -29,7 +29,7 @@ export default function OffertePage() {
         <MailForm intent="offerte" />
       </div>
     </article>
-    <BedWall heading="Wat we in de offerte meenemen" items={content.offerte.notes} />
+    <BedWall heading="Wat wij in de offerte meenemen" items={content.offerte.notes} />
     </div>
   );
 }

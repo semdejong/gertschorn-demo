@@ -23,7 +23,7 @@ export function Header() {
 
   return (
     <header data-section="header" className="sticky top-0 z-40 border-b-[3px] border-steen bg-wit">
-      <div className="mx-auto flex max-w-[1240px] items-center gap-2 px-2 py-2 min-[400px]:gap-3 min-[400px]:px-4">
+      <div className="mx-auto flex max-w-[1100px] items-center gap-3 px-5 py-2">
         <Link href="/" className="shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -44,8 +44,8 @@ export function Header() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`inline-flex min-h-11 items-center whitespace-nowrap px-2 text-[0.95rem] font-medium ${
-                      active ? "border-b-[3px] border-blauw" : ""
+                    className={`inline-flex min-h-11 items-center whitespace-nowrap border-b-[3px] px-2 text-[0.95rem] font-medium ${
+                      active ? "border-blauw" : "border-transparent"
                     }`}
                   >
                     {item.label}
