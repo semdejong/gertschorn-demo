@@ -17,6 +17,17 @@ export default function NotFound() {
         </Link>
         <PhoneLink className="btn btn-wit" />
       </div>
+      <nav aria-label="Pagina's" className="mt-12 border-t-[3px] border-steen pt-6">
+        <ul className="flex flex-col gap-[3px]">
+          {content.nav.map((item) => (
+            <li key={item.href} className="border-b border-steen/40">
+              <Link href={item.href} className="inline-flex min-h-11 items-center text-[1.05rem]">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </article>
   );
 }

@@ -8,7 +8,8 @@ import { Testimonial } from "@/components/Testimonial";
 export default function Home() {
   const border = projectById("verhoogde-border");
   const overzicht = projectById("tuinoverzicht");
-  if (!border || !overzicht) return null;
+  const vijver = projectById("vijver");
+  if (!border || !overzicht || !vijver) return null;
 
   return (
     <>
@@ -52,6 +53,27 @@ export default function Home() {
               Alle projectfoto&apos;s
             </Link>
           </p>
+        </div>
+      </section>
+
+      <section data-section="snoeien" className="border-t-[3px] border-steen">
+        <div className="mx-auto grid max-w-[1100px] items-end gap-10 px-5 py-14 md:py-16 lg:grid-cols-12">
+          <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1">
+            <p className="font-mono text-[0.95rem]">SNOEIEN</p>
+            <h2 className="mt-3 font-display text-[2rem] font-medium">{content.home.snoeiTitle}</h2>
+            <p className="mt-4">{content.home.snoeiText}</p>
+            <p className="mt-4">
+              <Link href="/snoeien" className="prose-link inline-flex min-h-11 items-center">
+                Bomen snoeien en kappen
+              </Link>
+            </p>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-1 lg:row-start-1">
+            <Link href="/projecten#vijver" className="block">
+              <RaisedBed project={vijver} />
+            </Link>
+            <p className="mt-4 max-w-[36ch] text-grijs">{content.home.vijverText}</p>
+          </div>
         </div>
       </section>
 

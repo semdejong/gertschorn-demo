@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { content, projectById, type ArticleId } from "@/content";
+import { BedWall } from "@/components/BedWall";
 import { CtaRow } from "@/components/CtaRow";
 import { RaisedBed } from "@/components/RaisedBed";
 import { Testimonial } from "@/components/Testimonial";
@@ -59,6 +60,7 @@ export function ArticlePage({ id }: { id: ArticleId }) {
           </aside>
         ) : null}
       </div>
+      <BedWall heading={content.bedHeadings[id]} items={content.pageBeds[id]} />
       {showQuote ? (
         <section data-section="referentie" className="border-t-[3px] border-steen">
           <div className="mx-auto max-w-[1100px] px-5 py-12 md:py-16">

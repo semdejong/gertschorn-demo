@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { content } from "@/content";
+import { BedWall } from "@/components/BedWall";
 import { MailForm } from "@/components/MailForm";
 import { PhoneLink } from "@/components/PhoneLink";
 
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
 
 export default function OffertePage() {
   return (
-    <article data-section="offerte" className="mx-auto grid max-w-[1100px] gap-12 px-5 py-12 md:py-16 lg:grid-cols-12">
+    <div data-section="offerte">
+    <article className="mx-auto grid max-w-[1100px] gap-12 px-5 py-12 md:py-16 lg:grid-cols-12">
       <div className="lg:col-span-5">
         <p className="font-mono text-[0.95rem]">OFFERTE</p>
         <h1 className="mt-3 max-w-[10em] font-display text-[2.6rem] font-bold leading-[1.1] md:text-[3.3rem]">
@@ -27,5 +29,7 @@ export default function OffertePage() {
         <MailForm intent="offerte" />
       </div>
     </article>
+    <BedWall heading="Wat we in de offerte meenemen" items={content.offerte.notes} />
+    </div>
   );
 }
